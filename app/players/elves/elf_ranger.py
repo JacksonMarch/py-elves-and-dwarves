@@ -8,8 +8,8 @@ class ElfRanger(Elf):
             musical_instrument: str,
             bow_level: int
     ) -> None:
-        self._bow_level = bow_level
         super().__init__(nickname, musical_instrument)
+        self._bow_level = bow_level
 
     def player_info(self) -> str:
         return (
@@ -18,5 +18,5 @@ class ElfRanger(Elf):
             f" the {self._bow_level} level"
         )
 
-    def get_rating(self):
+    def get_rating(self) -> int:
         return self._bow_level * 3
